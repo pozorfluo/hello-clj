@@ -1,4 +1,4 @@
-# clj-guestbook
+# hello-clj
 
 generated using Luminus version "3.57"
 

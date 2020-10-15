@@ -26,10 +26,18 @@
               {% csrf-field %}
               <div class="field">
                 <label for="name" class="label">Name</label>
+                {% if errors.name %}
+                <div class="notification is-danger">{{ errors.name|join}}</div>
+                {% endif %}
                 <input type="text" class="input" name="name" value="{{name}}" />
               </div>
               <div class="field">
                 <label for="message" class="label">Message</label>
+                {% if errors.message %}
+                <div class="notification is-danger">
+                  {{ errors.message|join}}
+                </div>
+                {% endif %}
                 <textarea name="message" class="textarea">{{message}}</textarea>
               </div>
               <input type="submit" class="button is-primary" value="Comment" />
